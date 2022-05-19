@@ -1,0 +1,29 @@
+.mat-dialog-container {
+  padding: 0;
+}
+
+.dialog-header {
+  background: lightgray;
+  height: 3.125rem;
+  display: flex;
+}
+
+.dialog-header-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  align-self: center;
+  margin-left: 1rem;
+}
+
+.dialog-content {
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+.dialog-footer {
+  border-top: 0.0625rem solid #f3f5f7;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0.65rem;
+}

@@ -1,0 +1,5 @@
+<a tabindex="-1" #menuItems *ngFor="let mi of menuItems;let i = index" 
+(click)="onClick($event, i)" (keydown)="onKeyDown($event, i)">
+  <mat-icon mat-list-icon>{{ mi.icon }}</mat-icon>
+  <span class="dropdown-menu-item">{{ mi.value }}</span>
+</a>

@@ -1,0 +1,28 @@
+<form #f="ngForm" name="satisfactionForm">
+  <p>How would you rate Angular Material Icons?</p>
+
+  <mat-button-toggle-group name="toggleGroup" #group="matButtonToggleGroup" [(ngModel)]="satisfactionRating" aria-label="Satisfaction Rating">
+    <mat-button-toggle [value]="satisfactionRating.very_dissatisfied" (click)="onClick(group.value)">
+      <mat-icon aria-label="Very Dissatisfied">sentiment_very_dissatisfied</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle [value]="satisfactionRatings.dissatisfied" (click)="onClick(group.value)">
+      <mat-icon aria-label="Dissatisfied">sentiment_dissatisfied</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle [value]="satisfactionRatings.neutral" (click)="onClick(group.value)">
+      <mat-icon aria-label="Neutral">sentiment_neutral</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle [value]="satisfactionRatings.satisfied" (click)="onClick(group.value)">
+      <mat-icon aria-label="Satisfied">sentiment_satisfied</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle [value]="satisfactionRatings.very_satisfied" (click)="onClick(group.value)">
+      <mat-icon aria-label="Very Satisfied">sentiment_very_satisfied</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <p>Any other comments?</p>
+  <textarea name="txtComments" matInput [(ngModel)]="comments"></textarea>
+
+  <p>
+    <button mat-raised-button color="primary" (click)="onSubmit(f)">Submit</button>
+  </p>
+</form>

@@ -1,0 +1,23 @@
+.menu-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-direction: row;
+}
+
+.menu-container .dropdown-menu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  top: 3.2rem;
+  width: auto;
+  word-break: keep-all;
+  z-index: 1;
+  background-color: #3b488f;
+  border: 2px solid gray;
+}
+
+.menu-container .dropdown-menu.menu-opened {
+  display: flex;
+}

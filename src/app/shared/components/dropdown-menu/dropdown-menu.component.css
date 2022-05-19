@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  padding: 0 0.8rem;
+}
+
+a:not(:last-child) {
+  border-bottom: 2px solid gray;
+}
+
+a:hover,
+a:focus {
+  background-color: #a12f42;
+}
+
+.dropdown-menu-item {
+  display: block;
+  margin: 1.33rem 0rem;
+  font-weight: bold;
+}

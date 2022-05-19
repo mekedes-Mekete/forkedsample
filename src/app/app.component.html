@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <a [routerLink]="['/']">Home</a>&nbsp;&nbsp;
+    <a [routerLink]="['/survey']">Survey</a>&nbsp;&nbsp;
+    <div class="menu-container" 
+        (click)="menuOpened = true" (mouseenter)="menuOpened = true" 
+        (mouseleave)="menuOpened = false" (keydown)="onKeyDown($event)">
+        <span #menuTrigger tabindex="0">Menu</span>
+        <dropdown-menu [ngClass]="{ 'menu-opened': menuOpened }" class="dropdown-menu" [menuItems]="investmentClasses"></dropdown-menu>
+    </div>
+</mat-toolbar>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
